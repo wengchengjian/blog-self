@@ -1,0 +1,31 @@
+@import "../index.scss";
+$gray: #bfbfbf;
+$publish: #8c8c8c;
+.list-item {
+    background-color: #fff;
+    margin-bottom: 1rem;
+}
+
+.cotent-box {
+    height: 100%;
+    padding: 0 1.25rem;
+}
+
+.author_name {
+    color: $primary;
+}
+
+.artile_time {
+    color: $gray;
+}
+
+.public_info {
+    color: $publish;
+}
+
+.label_item {
+    margin: 5px;
+    padding: 5px;
+    background-color: $primary;
+    color: #fff;
+}
