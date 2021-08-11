@@ -9,7 +9,7 @@ import BlogAbout from "./web/BlogAbout";
 import BlogArticle from "../view/web/BlogArticle";
 import BlogLoginCon from "../container/BlogLoginCon";
 import { Switch, Route } from "react-router";
-
+import MarketAnalysis from "./web/market_analysis";
 import "../static/sass/home.scss";
 import "antd/dist/antd.css";
 
@@ -22,7 +22,7 @@ const Home = () => {
           <Layout>
             <BlogSider />
             <Switch>
-              <Route path="/" exact component={BlogIndexCon} />
+              <Route path="/" exact component={MarketAnalysis} />
               <Route path="/archives" exact component={BlogArchivesCon} />
               <Route path="/catalogue" exact component={BlogCatalogue} />
               <Route path="/dashboard" exact component={BlogDashboard} />
