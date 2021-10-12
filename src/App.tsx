@@ -1,16 +1,20 @@
-import React from "react";
+import React from 'react';
 
-import Home from "./view/Home";
-import store from "./redux/store";
-import { Provider } from "react-redux";
-import { BrowserRouter as Router } from "react-router-dom";
+import Home from './view/Home';
+import BlogWrite from './view/web/BlogWrite';
+
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect,
+} from 'react-router-dom';
+
 function App() {
   return (
     <>
       <Router>
-        <Provider store={store}>
-          <Home />
-        </Provider>
+        <Route path="/" component={Home} />
       </Router>
     </>
   );

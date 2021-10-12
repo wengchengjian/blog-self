@@ -1,9 +1,9 @@
-import React from "react";
+import React from 'react';
 
-import ReactDOM from "react-dom";
+import ReactDOM from 'react-dom';
 
-import App from "./app";
+import App from './app';
 
-import "./static/sass/index.scss";
+import './static/index.less';
 
-ReactDOM.render(<App />, document.getElementById("root"));
+ReactDOM.render(<App />, document.getElementById('root'));
