@@ -15,4 +15,5 @@ export interface Article {
   lastArticleId: string;
   nextArticleId: string;
   createTime: string;
+  updateTime: string;
 }

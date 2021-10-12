@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useCallback } from 'react';
 import { Layout } from 'antd';
 import BlogSider from '../components/BlogSider';
 import BlogHeader from '../components/BlogHeader';
@@ -16,18 +16,19 @@ import { useStores } from '@/hooks/useStore';
 import 'antd/dist/antd.css';
 import styles from './home.module.less';
 import BlogWrite from './web/BlogWrite';
+import BlogCreateCenter from '@/view/web/BlogCreateCenter';
 const Home = () => {
   const { userStore, tagStore, articleStore } = useStores();
-
-  useEffect(() => {
-    init();
-  }, []);
-
-  const init = async () => {
+  const init = useCallback(async () => {
     await userStore.init();
     await tagStore.init();
     await articleStore.init();
-  };
+  }, []);
+
+  useEffect(() => {
+    init();
+  }, [init]);
+
   return (
     <>
       <Layout className={styles['home-page']}>
@@ -37,6 +38,7 @@ const Home = () => {
         <Switch>
           <Route path="/index" component={SiderContent} />
           <Route path="/write" component={BlogWrite} />
+          <Route path="/center" component={BlogCreateCenter} />
         </Switch>
         {/* <BlogFooter /> */}
       </Layout>

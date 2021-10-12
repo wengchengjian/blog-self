@@ -25,7 +25,6 @@ class HandleResponseStandOutInterceptor {
     this.join(res);
   }
   intercept(res: IV) {
-
     try {
       this.start(res);
     } catch (err: any) {
@@ -45,7 +44,6 @@ simpleInterceptor.use((res: IV) => {
 simpleInterceptor.use((res: IV) => {
   if (res.code === 214) {
     userStore.Login(res.data);
-    res.data = undefined;
   }
 });
 

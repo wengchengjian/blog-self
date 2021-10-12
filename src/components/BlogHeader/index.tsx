@@ -40,7 +40,7 @@ const BlogHeader = observer(() => {
     userStore.Logout();
   };
   const selfCenter = () => {
-    history.push('/index/center');
+    history.push('/center');
   };
   const handleClickEnter = (e: { keyCode: number }) => {
     if (e.keyCode === 13) {
